@@ -3,7 +3,7 @@ using namespace std;
 class A{
 public:
 	A();
-	 virtual ~A();//当用一个基类的指针去删除一个派生类的对象时，调用基类的析构函数时派生类的析构函数也会被调用 避免引起内存泄露
+	 virtual ~A();//当用一个基类的指针去删除一个派生类的对象时，调用基类的析构函数时派生类的析构函数也会被调用 避免引起内存泄露 一般都会将基类的析构函数写为虚函数 
 	 virtual void fun1(){//如果基类把一个函数声明为虚函数，则在派生类中该函数也是隐式的虚函数
 		cout<< "AAAAA"<<endl;
 	}
@@ -77,6 +77,7 @@ int main(){
 	//delete b;//输出delete class B  delete class A
 	//delete c;//输出delete class A
 
+	//
 	return 1;
 
 }
